@@ -1,6 +1,8 @@
 function setup() {
-  createCanvas(700, 700);
+  createCanvas(window.innerWidth, window.innerHeight);
 }
+
+window.addEventListener("resize", setup);
 
 function collideCircleCircle(cx1, cy1, cx2, cy2, d1, d2){
   let r1 = d1/2
@@ -22,8 +24,8 @@ function draw() {
   background(220);
   let cx1 = mouseX
   let cy1 = mouseY
-  let cx2 = 350
-  let cy2 = 350
+  let cx2 = window.innerWidth/2
+  let cy2 = window.innerHeight/2
   
   let d1 = 30
   let d2 = 50
